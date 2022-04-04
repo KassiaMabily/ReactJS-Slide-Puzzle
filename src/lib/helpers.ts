@@ -83,3 +83,16 @@ export function updateURLParameter(url: string, param: string, paramVal: string)
     var rows_txt = temp + "" + param + "=" + paramVal;
     return baseURL + "?" + newAdditionalURL + rows_txt;
 }
+
+export function titleCase(str: string | undefined) {
+    if(str) {
+        var splitStr = str.toLowerCase().split(' ');
+        for (var i = 0; i < splitStr.length; i++) {
+          splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);     
+        }
+    
+        return splitStr.join(' '); 
+    }
+    
+    return "";
+}

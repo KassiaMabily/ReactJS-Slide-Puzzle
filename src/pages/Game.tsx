@@ -2,6 +2,7 @@ import qs from 'query-string';
 import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import Board from '../components/Boards';
+import { updateURLParameter } from '../lib/helpers';
 import useQuery from '../lib/hooks/useQuery';
 import Blank from "../template/Blank";
 import puzzles from "./../puzzles.json";
@@ -20,10 +21,12 @@ export default function Game () {
         const randomPuzzleIndex = Math.floor(Math.random() * puzzlesFiltered.length);
         const puzz = puzzlesFiltered[randomPuzzleIndex];
         
-        const newQueries = { ...queryParams, imgurl: puzz.imgUrl };
-        history.push({
-            search: qs.stringify(newQueries)
-        })
+        // const newQueries = { ...queryParams, imgurl: puzz.imgUrl };
+        // history.push({
+        //     search: qs.stringify(newQueries)
+        // })
+
+        window.history.replaceState("", "", updateURLParameter(window.location.href, "img", puzz.imgUrl))
 
         setPuzzle(puzzlesFiltered[randomPuzzleIndex]);
     };

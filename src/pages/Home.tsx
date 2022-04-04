@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
+import { titleCase } from "../lib/helpers";
 import Blank from "../template/Blank";
 import puzzles from "./../puzzles.json";
 
@@ -32,7 +33,7 @@ export default function Home () {
                                         })
                                     }}
                                 >
-                                    {item}
+                                    {titleCase(item)}
                                 </button>
                             </li>
                         ))
