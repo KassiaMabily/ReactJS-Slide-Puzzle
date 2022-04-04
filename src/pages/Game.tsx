@@ -1,6 +1,8 @@
 import qs from 'query-string';
 import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import Board from '../components/Boards';
+import useQuery from '../lib/hooks/useQuery';
 import Blank from "../template/Blank";
 import puzzles from "./../puzzles.json";
 
@@ -16,10 +18,9 @@ export default function Game () {
             return item.category === queryParams.category;
         })
         const randomPuzzleIndex = Math.floor(Math.random() * puzzlesFiltered.length);
-        const imgurl = puzzlesFiltered[randomPuzzleIndex];
+        const puzz = puzzlesFiltered[randomPuzzleIndex];
         
-        const newQueries = { ...queryParams, imgurl: imgurl };
-
+        const newQueries = { ...queryParams, imgurl: puzz.imgUrl };
         history.push({
             search: qs.stringify(newQueries)
         })
@@ -31,10 +32,14 @@ export default function Game () {
         loadGame();
     })
 
+    if(!puzzle) return <span>Carregando</span>
+
     return (
-        <Blank title={puzzle?.category ?? ""} showBackButton>
-            { puzzle?.category }
-            { puzzle?.imgUrl }
+        <Blank title={puzzle.title} showBackButton>
+            <p className='text-sm'>{puzzle.description}</p>
+            <div className='flex flex-col items-center space-y-2 sm:space-y-4'>
+                <Board imgUrl={puzzle.imgUrl} />
+            </div>
         </Blank>
     )
 }

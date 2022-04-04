@@ -1,6 +1,10 @@
 import { ChevronLeftIcon } from '@heroicons/react/outline'
+import { useHistory } from 'react-router-dom';
 
 export default function Blank({ children, title, showBackButton = false }: Props) {
+    const history = useHistory();
+    
+
     return (
         <article className="flex justify-center items-center h-screen">
             <div className="sm:mx-auto sm:w-full sm:max-w-md">
@@ -11,12 +15,14 @@ export default function Blank({ children, title, showBackButton = false }: Props
                                 <button
                                     type="button"
                                     className="inline-flex items-center p-1 border border-transparent rounded-full shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                    onClick={() => {
+                                        history.push("/");
+                                    }}
                                 >
                                     <ChevronLeftIcon className="h-5 w-5" aria-hidden="true" />
                                 </button>
                             )
                         }
-                        
 
                         <h1 className='text-lg'>{title}</h1>
                     </div>
