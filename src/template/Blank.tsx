@@ -1,12 +1,13 @@
 import { ChevronLeftIcon } from '@heroicons/react/outline'
 import { useHistory } from 'react-router-dom';
+import I18n from '../components/I18n';
 
 export default function Blank({ children, title, showBackButton = false }: Props) {
     const history = useHistory();
     
 
     return (
-        <article className="flex justify-center items-center h-screen">
+        <article className="relative flex justify-center items-center h-screen">
             <div className="sm:mx-auto sm:w-full sm:max-w-md">
                 <div className="rounded-lg space-y-4 bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
                     <div className='flex space-x-4'>
@@ -25,11 +26,13 @@ export default function Blank({ children, title, showBackButton = false }: Props
                         }
 
                         <h1 className='text-lg'>{title}</h1>
-                    </div>
-                    
+                    </div> 
                     
                     {children}
                 </div>
+            </div>
+            <div className='absolute bottom-0 right-5'>
+                <I18n />
             </div>
         </article>
     )
@@ -38,5 +41,5 @@ export default function Blank({ children, title, showBackButton = false }: Props
 type Props = {
     children: React.ReactNode;
     showBackButton?: boolean;
-    title: string;
+    title: JSX.Element;
 }

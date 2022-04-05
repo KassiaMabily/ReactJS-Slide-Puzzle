@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
-import { titleCase } from "../lib/helpers";
 import Blank from "../template/Blank";
 import puzzles from "./../puzzles.json";
 
-import I18n, { Translator } from '../components/I18n'
+import { Translator } from '../components/I18n'
 import { useTranslation } from "react-i18next";
 
 export default function Home () {
@@ -22,12 +21,8 @@ export default function Home () {
 
 
     return (
-        <Blank title="Escolha sua categoria">
+        <Blank title={<Translator path={`home.title`} />}>
             <div className="space-y-2 sm:space-y-4">
-                <p>
-                    <Translator path="home.message" />
-                </p>
-
                 <ul className="flex space-x-2 sm:space-x-4">
                     {
                         categories.map((item, index) => (
@@ -42,15 +37,13 @@ export default function Home () {
                                         })
                                     }}
                                 >
-                                    <Translator path={`home.${item}`} />
+                                    <Translator path={`home.categories.${item}`} />
                                 </button>
                             </li>
                         ))
                     }
                 </ul>
             </div>
-
-            <I18n />
         </Blank>
     )
 }

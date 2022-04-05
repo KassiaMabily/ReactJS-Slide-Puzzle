@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Motion, spring } from "react-motion";
 import { getMatrixPosition, getVisualPosition } from "../lib/helpers";
-import { TILE_COUNT, GRID_SIZE, BOARD_SIZE } from "../lib/constants"
+import { TILE_COUNT, GRID_SIZE, BOARD_SIZE, COUNTER } from "../lib/constants"
+import Timer from "./Timer";
 
 function Tile(props: IProps) {
     const { tile, index, width, height, handleTileClick, imgUrl } = props;
-    console.log("img in tile", imgUrl)
+    // Carregamento de página
+    const [ timeLoading, setTimeLoading ] = useState(COUNTER)
+    const [ activeTimeLoading, setActiveTimeLoading ] = useState(false);
+
     const { row, col } = getMatrixPosition(index);
     const visualPos = getVisualPosition(row, col, width, height);
     const tileStyle = {
@@ -23,8 +27,27 @@ function Tile(props: IProps) {
         translateY: spring(visualPos.y)
     }
 
+    useEffect(() => {
+        setTimeLoading(COUNTER)
+        setActiveTimeLoading(true);
+    }, [])
+
     return (
+        <>
+        {
+            activeTimeLoading && (
+                <Timer 
+                    totalTime={COUNTER}
+                    currentTime={timeLoading}
+                    isActive={activeTimeLoading}
+                    setIsActive={setActiveTimeLoading}
+                    setCurrentTime={setTimeLoading}
+                />
+            )
+        }
+        
         <Motion style={motionStyle}>
+            
             {({ translateX, translateY }) => (
                 <li
                     style={{
@@ -40,6 +63,7 @@ function Tile(props: IProps) {
                 </li>
             )}
         </Motion>
+        </>
     );
 }
 

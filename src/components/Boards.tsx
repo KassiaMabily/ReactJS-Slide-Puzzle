@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Tile from "./Tile";
-import { TILE_COUNT, GRID_SIZE, BOARD_SIZE } from "../lib/constants"
+import { TILE_COUNT, GRID_SIZE, BOARD_SIZE, COUNTER } from "../lib/constants"
 import { canSwap, shuffle, swap, isSolved } from "../lib/helpers"
 
 function Board({ imgUrl }: { imgUrl: string }) {
     const [tiles, setTiles] = useState([...Array(TILE_COUNT).keys()]);
+    const [counter, setCounter] = useState(COUNTER);
     const [isStarted, setIsStarted] = useState(false);
 
     console.log('is started:', isStarted)
@@ -43,8 +44,17 @@ function Board({ imgUrl }: { imgUrl: string }) {
     const hasWon = isSolved(tiles);
 
     useEffect(() => {
-        if(imgUrl && !isStarted) handleStartClick();
+        
     }, [])
+
+    useEffect(() => {
+        const timer = 0;
+        if(counter > 0) setInterval(() => setCounter(counter - 1), 1000);
+
+        if(imgUrl && !isStarted && counter <= 0) handleStartClick();
+        
+        return () => clearInterval(timer);
+    }, [counter]);
 
     return (
         <>

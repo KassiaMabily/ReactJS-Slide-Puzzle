@@ -2,6 +2,7 @@ import qs from 'query-string';
 import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import Board from '../components/Boards';
+import { Translator } from '../components/I18n';
 import { updateURLParameter } from '../lib/helpers';
 import useQuery from '../lib/hooks/useQuery';
 import Blank from "../template/Blank";
@@ -38,10 +39,10 @@ export default function Game () {
     if(!puzzle) return <span>Carregando</span>
 
     return (
-        <Blank title={puzzle.title} showBackButton>
-            <p className='text-sm'>{puzzle.description}</p>
+        <Blank title={<Translator path={`puzzles.${puzzle.id}.title`} />} showBackButton>
+            <p className='text-3xl' style={{ fontFamily: "caveat" }}><Translator path={`puzzles.${puzzle.id}.description`} /></p>
             <div className='flex flex-col items-center space-y-2 sm:space-y-4'>
-                <Board imgUrl={puzzle.imgUrl} />
+                <Board imgUrl={puzzle.imgUrl} /> 
             </div>
         </Blank>
     )

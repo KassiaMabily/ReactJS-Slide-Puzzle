@@ -2,9 +2,29 @@
 export default {
   translations: {
     home: {
-      message: 'Olá Mundo!',
-      music: "Música",
-      phrase: "Frase",
+      title: 'Escolha uma categoria',
+      categories: {
+        music: "Música",
+        phrase: "Frase",
+        court: "Cantada",
+      },
+    },
+    puzzles: {
+      1: {
+        category: "Música",
+        description: "Singular é o jeito como nos aproximamos. Singular é o jeito que sorrio quando penso em você!",
+        title: "Singular"
+      },
+      2: {
+        category: "Frase",
+        description: "Me perdi na profundidade do teu olhar, me afoguei em tua história. Você coisou meu ❤️",
+        title: "Em você"
+      },
+      3: {
+        category: "Cantada",
+        description: "Europeia maloqueira poderousan",
+        title: "Classuda"
+      }
     }
   }
 }
