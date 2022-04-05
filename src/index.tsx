@@ -5,6 +5,7 @@ import './styles/reset.css';
 import './styles/index.css';
 import './styles/board.css';
 
+import './i18n'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
