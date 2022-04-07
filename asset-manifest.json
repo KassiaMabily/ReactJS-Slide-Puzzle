@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/ReactJS-Slide-Puzzle/static/css/main.d61385f0.css",
+    "main.js": "/ReactJS-Slide-Puzzle/static/js/main.af20c229.js",
+    "static/js/787.28cb0dcd.chunk.js": "/ReactJS-Slide-Puzzle/static/js/787.28cb0dcd.chunk.js",
+    "static/media/eua-flag.svg": "/ReactJS-Slide-Puzzle/static/media/eua-flag.d091fc0cf62288ed79387c6b1a5865a7.svg",
+    "static/media/brasil-flag.svg": "/ReactJS-Slide-Puzzle/static/media/brasil-flag.100516bc4bddde66b73f49ddb2472cb1.svg",
+    "index.html": "/ReactJS-Slide-Puzzle/index.html",
+    "main.d61385f0.css.map": "/ReactJS-Slide-Puzzle/static/css/main.d61385f0.css.map",
+    "main.af20c229.js.map": "/ReactJS-Slide-Puzzle/static/js/main.af20c229.js.map",
+    "787.28cb0dcd.chunk.js.map": "/ReactJS-Slide-Puzzle/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d61385f0.css",
+    "static/js/main.af20c229.js"
+  ]
+}
