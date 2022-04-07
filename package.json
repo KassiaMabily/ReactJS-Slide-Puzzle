@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "https://KassiaMabily.github.io/ReactJS-Slide-Puzzle",
+  "homepage": "$PUBLIC_URL",
   "private": true,
   "dependencies": {
     "@heroicons/react": "^1.0.6",
