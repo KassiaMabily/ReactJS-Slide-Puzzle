@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "https://KassiaMabily.github.io/ReactJS-Slide-Puzzle/static/css/main.d61385f0.css",
-    "main.js": "https://KassiaMabily.github.io/ReactJS-Slide-Puzzle/static/js/main.8a632dd3.js",
+    "main.js": "https://KassiaMabily.github.io/ReactJS-Slide-Puzzle/static/js/main.e47e28df.js",
     "static/js/787.28cb0dcd.chunk.js": "https://KassiaMabily.github.io/ReactJS-Slide-Puzzle/static/js/787.28cb0dcd.chunk.js",
     "static/media/eua-flag.svg": "https://KassiaMabily.github.io/ReactJS-Slide-Puzzle/static/media/eua-flag.d091fc0cf62288ed79387c6b1a5865a7.svg",
     "static/media/brasil-flag.svg": "https://KassiaMabily.github.io/ReactJS-Slide-Puzzle/static/media/brasil-flag.100516bc4bddde66b73f49ddb2472cb1.svg",
     "index.html": "https://KassiaMabily.github.io/ReactJS-Slide-Puzzle/index.html",
     "main.d61385f0.css.map": "https://KassiaMabily.github.io/ReactJS-Slide-Puzzle/static/css/main.d61385f0.css.map",
-    "main.8a632dd3.js.map": "https://KassiaMabily.github.io/ReactJS-Slide-Puzzle/static/js/main.8a632dd3.js.map",
+    "main.e47e28df.js.map": "https://KassiaMabily.github.io/ReactJS-Slide-Puzzle/static/js/main.e47e28df.js.map",
     "787.28cb0dcd.chunk.js.map": "https://KassiaMabily.github.io/ReactJS-Slide-Puzzle/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d61385f0.css",
-    "static/js/main.8a632dd3.js"
+    "static/js/main.e47e28df.js"
   ]
 }
