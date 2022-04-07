@@ -8,7 +8,7 @@ import Home from "../pages/Home";
 
 export default function AppRoutes (){
     return (
-        <Router basename={process.env.REACT_APP_BASENAME}>
+        <Router>
             <Switch>
                 <Route exact path="/">
                     <Home />
