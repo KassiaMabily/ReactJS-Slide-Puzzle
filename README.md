@@ -1,16 +1,16 @@
 <p align="center">
-    <img src="./src/assets/icon.png" height="150" width="150" alt="react-template" />
+    <img src="public/logo192.png" height="192" width="192" alt="Logo" />
 </p>
 
 <h3 align="center">
-    react-template
+    ReactJS-Slide-Puzzle
 </h3>
 
 <p align="center">
-    <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/KassiaMabily/react-template?color=%2304D361"/>
-    <img alt="Repository size" src="https://img.shields.io/github/repo-size/KassiaMabily/react-template" />
+    <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/KassiaMabily/ReactJS-Slide-Puzzle?color=%2304D361"/>
+    <img alt="Repository size" src="https://img.shields.io/github/repo-size/KassiaMabily/ReactJS-Slide-Puzzle" />
     <a href="https://github.com/KassiaMabily/react-template/commits/main">
-        <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/KassiaMabily/react-template">
+        <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/KassiaMabily/ReactJS-Slide-Puzzle">
     </a>
     <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 </p>
@@ -19,13 +19,11 @@
 	🚧 Development 🚧
 </h4>
 
-<p align="center">
-    <img src="public/logo192.png" height="192" width="192" alt="Logo" />
-</p>
+
 
 
 ## 💻 Overview
-...
+Jogo de quebra cabeça de arrastar com frases, musicas e cantadinhas para ❤️
 
 ---
 
@@ -34,13 +32,13 @@
 ```bash
 
 # Clone this repository
-$ git clone https://github.com/KassiaMabily/app.git
+$ git clone https://github.com/ReactJS-Slide-Puzzle/app.git
 
 ```
 
 ## 🚀 Tech Stack
 
--   **[...](...)**
+-   **[ReactJS](https://pt-br.reactjs.org/)**
 
 #### **Utilitários**
 
